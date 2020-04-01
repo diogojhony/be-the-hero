@@ -16,7 +16,7 @@ module.exports = {
         'ongs.email',
         'ongs.whatsapp',
         'ongs.city',
-        'ongs.uf'
+        'ongs.uf',
       ]);
 
     res.header('X-Total-Count', count['count(*)']);
@@ -32,7 +32,7 @@ module.exports = {
       title,
       description,
       value,
-      ong_id
+      ong_id,
     });
 
     return res.json({ id });
@@ -51,10 +51,8 @@ module.exports = {
       return res.status(401).json({ error: 'Operation not permitted.' });
     }
 
-    await connection('incidents')
-      .where('id', id)
-      .delete();
+    await connection('incidents').where('id', id).delete();
 
     return res.status(204).send();
-  }
+  },
 };

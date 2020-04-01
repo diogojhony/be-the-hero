@@ -20,8 +20,8 @@ export default function Profile() {
     async function loadIncidents() {
       const response = await api.get('profile', {
         headers: {
-          Authorization: ongId
-        }
+          Authorization: ongId,
+        },
       });
 
       setIncidents(response.data);
@@ -34,11 +34,11 @@ export default function Profile() {
     try {
       await api.delete(`incidents/${id}`, {
         headers: {
-          Authorization: ongId
-        }
+          Authorization: ongId,
+        },
       });
 
-      setIncidents(incidents.filter(incident => incident.id !== id));
+      setIncidents(incidents.filter((incident) => incident.id !== id));
     } catch (error) {
       alert(`Erro ao deletar caso, tente novamente.`);
     }
@@ -67,7 +67,7 @@ export default function Profile() {
       <h1>Casos cadastrados</h1>
 
       <ul>
-        {incidents.map(incident => (
+        {incidents.map((incident) => (
           <li key={incident.id}>
             <strong>CASO:</strong>
             <p>{incident.title}</p>
@@ -79,7 +79,7 @@ export default function Profile() {
             <p>
               {Intl.NumberFormat('pt-BR', {
                 style: 'currency',
-                currency: 'BRL'
+                currency: 'BRL',
               }).format(incident.value)}
             </p>
 

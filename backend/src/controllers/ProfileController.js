@@ -1,5 +1,3 @@
-const crypto = require('crypto');
-
 const connection = require('../database/connection');
 
 module.exports = {
@@ -11,5 +9,5 @@ module.exports = {
       .select('*');
 
     return res.json(incidents);
-  }
+  },
 };

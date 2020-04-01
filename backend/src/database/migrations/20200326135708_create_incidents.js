@@ -3,12 +3,11 @@
  */
 
 /**
-* @param {knex} knex
-*/
-exports.up = function(knex) {
-  return knex.schema.createTable('incidents', function(table) {
-    table.increments(),
-
+ * @param {knex} knex
+ */
+exports.up = (knex) =>
+  knex.schema.createTable('incidents', (table) => {
+    table.increments();
     table.string('title').notNullable();
     table.string('description').notNullable();
     table.decimal('value').notNullable();
@@ -17,11 +16,10 @@ exports.up = function(knex) {
 
     table.foreign('ong_id').references('id').inTable('ongs');
   });
-};
 
 /**
-* @param {knex} knex
-*/
-exports.down = function(knex) {
+ * @param {knex} knex
+ */
+exports.down = (knex) => {
   return knex.schema.dropTable('incidents');
 };
