@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
-import './styles.css';
+import { Container, Content } from './styles';
 
 import logoImg from '../../assets/logo.svg';
 
@@ -40,8 +40,8 @@ export default function NewIncident() {
   }
 
   return (
-    <div className="new-incident-container">
-      <div className="content">
+    <Container>
+      <Content>
         <section>
           <img src={logoImg} alt="Be The Hero" />
 
@@ -80,7 +80,7 @@ export default function NewIncident() {
             Cadastrar
           </button>
         </form>
-      </div>
-    </div>
+      </Content>
+    </Container>
   );
 }
