@@ -44,7 +44,7 @@ Para rodas esse projeto você precisa ter instalado [Node.js](https://nodejs.org
 
 ### Instalação
 
-Clone esse reposi†ório
+Clone esse repositório
 
 ```sh
 git clone https://github.com/diogojhony/be-the-hero.git
