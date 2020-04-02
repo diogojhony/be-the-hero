@@ -15,8 +15,9 @@
 </p>
 
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-desenvolvido-com">Desenvolvido Com</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-começando">Começando</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-contribuindo">Contribuindo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-licença">Licença</a>
 </p>
 
@@ -24,7 +25,7 @@
   <img alt="BeTheHero" src=".github/preview.png" width="100%">
 </p>
 
-## 🚀 Tecnologias
+## 🚀 Desenvolvido Com
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -33,7 +34,62 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
 
-## 🤔 Como contribuir
+## 💻 Começando
+
+Para obter uma cópia em execução desse projeto na sua máquina, siga as etapas a seguir.
+
+### Prerequisitos
+
+Para rodas esse projeto você precisa ter instalado [Node.js](https://nodejs.org), [Yarn](https://classic.yarnpkg.com) e [Expo](https://expo.io).
+
+### Instalação
+
+Clone esse reposi†ório
+
+```sh
+git clone https://github.com/diogojhony/be-the-hero.git
+```
+
+#### 1. Backend
+
+```sh
+# Entre dentro da pasta do projeto
+cd backend
+
+# Instale os pacotes e rode as migrations
+yarn install && yarn knex migrate:latest
+
+# Execute o projeto
+yarn dev
+```
+
+#### 2. Frontend
+
+```sh
+# Entre dentro da pasta do projeto
+cd frontend
+
+# Instale os pacotes
+yarn install
+
+# Execute o projeto
+yarn start
+```
+
+#### 3. Mobile
+
+```sh
+# Entre dentro da pasta do projeto
+cd mobile
+
+# Instale os pacotes
+yarn install
+
+# Execute o projeto
+yarn start
+```
+
+## 🤔 Contribuindo
 
 - Faça um fork desse repositório;
 - Cria uma branch com a sua feature: `git checkout -b minha-feature`;
